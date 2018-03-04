@@ -3,11 +3,13 @@
 MagicMirror MichMich module to display GCP (Google Cloud Platform) billing over the last few days.
 
 # Presentation
-This module help you track expense on a GCP project over the last few days. In particular:
+This module helps you track expense on a GCP project over the last few days. In particular:
 * spent increasing is shown in blue
 * spent decreasing is shown in green
 * spent over your set limit is shown in red (optional)
 * amount is shown for everyday below the column bar
+
+It relies on the [@google-cloud/bigquery](https://www.npmjs.com/package/@google-cloud/bigquery) module. You can dig for more information those [gcp node.js examples](https://cloud.google.com/nodejs/).
 
 # Screenshot
 ![screenshot](https://github.com/da4throux/MMM-GCP/blob/master/MMM-GCPscreenshot0.1.png)
@@ -15,9 +17,9 @@ This module help you track expense on a GCP project over the last few days. In p
 # GCP side setup
 
 0. if you do not have a GCP account set one up :D
-1. ![set up billing export](https://cloud.google.com/billing/docs/how-to/export-data-bigquery) to BigQuery on the GCP project -> please take note of the table name for later
-2. Create a service account with BigQuery User Role (do queries), and Viewer Role (access the table). ![More details on BigQuery Access Control](https://cloud.google.com/bigquery/docs/access-control)
-3. Download the service account as JSON. More information on ![Service Accounts keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
+1. Set up [billing export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery) for the GCP project -> please take note of the table name for later (`lines.table`)
+2. Create a service account with (`BigQuery User`) Role (do queries), and (`Viewer`) Role (access the table). [More details on BigQuery Access Control](https://cloud.google.com/bigquery/docs/access-control)
+3. Download the service account as JSON. More information on [Service Accounts keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
 4. Copy this key to a location reachable by the module - path to the file will be set in the module configuration (`lines.serviceAccountKey`).
 
 # Install
