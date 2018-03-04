@@ -1,0 +1,25 @@
+{
+  "name": "MMM-GCP",
+  "version": "0.1.0",
+  "description": "GCP utilities",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da4throux/MMM-GCP"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "GCP",
+    "billing"
+  ],
+  "author": "da4throux",
+  "contributors": "https://github.com/da4throux/MMM-GCP/graphs/contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/da4throux/MMM-GCP/issues"
+  },
+  "homepage": "https://github.com/da4throux/MMM-GCP#readme",
+  "dependencies": {
+    "@google-cloud/bigquery": "latest"
+    }
+}
